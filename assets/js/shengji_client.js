@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var socket = io.connect("http://localhost:8080/");
+  var socket = io.connect("http://poker-gzt.rhcloud.com/");
 
   $(document).ready(function() {
 
