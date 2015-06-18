@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Symbola';
+    src: url('../fonts/Symbola.ttf') format('truetype')
+}
+
+svg {
+    position: absolute;
+    border: 1px solid black;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.overlay form {
+    position: absolute;
+    width: 36%;
+    left: 32%;
+    top: 40%;
+}
+
+.poker {
+    font-family: "Symbola";
+}
+
+.club, .spade {
+    fill: #222;
+}
+
+.diamond, .heart {
+    fill: #E60000;
+}
+
+.card-bg {
+    fill: rgba(255, 255, 255, 1);
+}
+
+.name-bg {
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+.name {
+    font-size: 18px;
+    fill: black;
+}
+
+.redback {
+    fill: #E60000;
+}
+
+.blackback {
+    fill: #222;
+}
+
+.redjoker {
+    fill: #E60000;
+}
+
+.blackjoker {
+    fill: #222;
+}
+
+.avatar {
+    cursor: pointer;
+    font-size: 140px;
+}
+
+.mycard {
+    cursor: pointer;
+    font-size: 140px;
+}
+
+.mycard g:hover rect{
+    fill: #DDD;
+}
+
+.mycard g:hover {
+    transition: all .1s ease-in-out;
+    transform: translate(0, -30);
+}
+
+.declarer {
+    font-size: 36px;
+}
+
+.decl-no {
+    cursor: not-allowed;
+}
+
+.decl-ok {
+    cursor: pointer;
+}
+
+.decl-ok:hover {
+    fill: rgb(51, 204, 51);
+}
+
+.declarer .btn {
+    font-size: 40px;
+}
+
+.echo {
+    font-size: 24px;
+}
+
+svg .btn {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.dealer {
+    font-size: 40px;
+}
+
+.dealer-bg {
+    /* fill: rgba(255, 255, 255, .8); */
+    fill: "yellow";
+}
+
+.dealer-off {
+    visibility: hidden;
+}
+
+.dealer-on {
+    visibility: visible;
+}

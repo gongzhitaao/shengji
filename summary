@@ -1,0 +1,14 @@
+#!/bin/bash
+
+find . \
+     ! -type d \
+     ! -path "./node_modules*" \
+     ! -path "./.git*" \
+     ! -path "./assets/fonts*" \
+     ! -path "./assets/js/*.min.js" \
+     ! -path "./assets/css/*.min.css" \
+     ! -path "./assets/css/normalize.css" \
+     ! -path "./LICENSE" \
+     ! -path "./tmp.txt" \
+     ! -path "./package.json" \
+    | xargs wc -l

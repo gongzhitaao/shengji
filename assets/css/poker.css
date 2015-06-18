@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'Symbola';
+    src: url('../fonts/Symbola.ttf') format('truetype')
+}
+
+.poker {
+    font-family: "Symbola";
+    background-color: white;
+}
+
+.poker-empty:before {
+    content: "\01F0A0";
+    color: #000099;
+}
+
+.poker-joker-king:before {
+    color: #990000;
+    content: "\01F0CF";
+}
+
+.poker-joker-queen:before {
+    color: #00B200;
+    content: "\01F0DF";
+}
+
+.poker-spade {
+    color: #222222;
+}
+
+.poker-club {
+    color: #444444;
+}
+
+.poker-heart {
+    color: #CC0000;
+}
+
+.poker-diamond {
+    color: #FF0000;
+}
+
+.poker-as:before {
+    content: "\01F0A1";
+}
+
+.poker-2s:before {
+    content: "\01F0A2";
+}
+
+.poker-3s:before {
+    content: "\01F0A3";
+}
+
+.poker-4s:before {
+    content: "\01F0A4";
+}
+
+.poker-5s:before {
+    content: "\01F0A5";
+}
+
+.poker-6s:before {
+    content: "\01F0A6";
+}
+
+.poker-7s:before {
+    content: "\01F0A7";
+}
+
+.poker-8s:before {
+    content: "\01F0A8";
+}
+
+.poker-9s:before {
+    content: "\01F0A9";
+}
+
+.poker-10s:before {
+    content: "\01F0AA";
+}
+
+.poker-js:before {
+    content: "\01F0AB";
+}
+
+.poker-cs:before {
+    content: "\01F0AC";
+}
+
+.poker-qs:before {
+    content: "\01F0AD";
+}
+
+.poker-ks:before {
+    content: "\01F0AE";
+}
+
+.poker-ah:before {
+    content: "\01F0B1";
+}
+
+.poker-2h:before {
+    content: "\01F0B2";
+}
+
+.poker-3h:before {
+    content: "\01F0B3";
+}
+
+.poker-4h:before {
+    content: "\01F0B4";
+}
+
+.poker-5h:before {
+    content: "\01F0B5";
+}
+
+.poker-6h:before {
+    content: "\01F0B6";
+}
+
+.poker-7h:before {
+    content: "\01F0B7";
+}
+
+.poker-8h:before {
+    content: "\01F0B8";
+}
+
+.poker-9h:before {
+    content: "\01F0B9";
+}
+
+.poker-10h:before {
+    content: "\01F0BA";
+}
+
+.poker-jh:before {
+    content: "\01F0BB";
+}
+
+.poker-ch:before {
+    content: "\01F0BC";
+}
+
+.poker-qh:before {
+    content: "\01F0BD";
+}
+
+.poker-kh:before {
+    content: "\01F0BE";
+}
+
+.poker-ad:before {
+    content: "\01F0C1";
+}
+
+.poker-2d:before {
+    content: "\01F0C2";
+}
+
+.poker-3d:before {
+    content: "\01F0C3";
+}
+
+.poker-4d:before {
+    content: "\01F0C4";
+}
+
+.poker-5d:before {
+    content: "\01F0C5";
+}
+
+.poker-6d:before {
+    content: "\01F0C6";
+}
+
+.poker-7d:before {
+    content: "\01F0C7";
+}
+
+.poker-8d:before {
+    content: "\01F0C8";
+}
+
+.poker-9d:before {
+    content: "\01F0C9";
+}
+
+.poker-10d:before {
+    content: "\01F0CA";
+}
+
+.poker-jd:before {
+    content: "\01F0CB";
+}
+
+.poker-cd:before {
+    content: "\01F0CC";
+}
+
+.poker-qd:before {
+    content: "\01F0CD";
+}
+
+.poker-kd:before {
+    content: "\01F0CE";
+}
+
+.poker-ac:before {
+    content: "\01F0D1";
+}
+
+.poker-2c:before {
+    content: "\01F0D2";
+}
+
+.poker-3c:before {
+    content: "\01F0D3";
+}
+
+.poker-4c:before {
+    content: "\01F0D4";
+}
+
+.poker-5c:before {
+    content: "\01F0D5";
+}
+
+.poker-6c:before {
+    content: "\01F0D6";
+}
+
+.poker-7c:before {
+    content: "\01F0D7";
+}
+
+.poker-8c:before {
+    content: "\01F0D8";
+}
+
+.poker-9c:before {
+    content: "\01F0D9";
+}
+
+.poker-10c:before {
+    content: "\01F0DA";
+}
+
+.poker-jc:before {
+    content: "\01F0DB";
+}
+
+.poker-cc:before {
+    content: "\01F0DC";
+}
+
+.poker-qc:before {
+    content: "\01F0DD";
+}
+
+.poker-kc:before {
+    content: "\01F0DE";
+}

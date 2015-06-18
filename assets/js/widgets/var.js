@@ -1,0 +1,135 @@
+var self = {
+  bgW: 110,
+  bgH: 140,
+  bgXOff: 1,
+  bgYOff: -10,
+  TxtDy: ".71em",
+  CardXOff: 30
+};
+
+self.Poker = {
+  // suit ----------------------------------------------------------------------
+  "club"        : {text: "\u2663", suit: "club"},
+  "spade"       : {text: "\u2660", suit: "spade"},
+  "heart"       : {text: "\u2665", suit: "heart"},
+  "diamond"     : {text: "\u2666", suit: "diamond"},
+  "club0"       : {text: "\u2667", suit: "club"},
+  "spade0"      : {text: "\u2664", suit: "spade"},
+  "heart0"      : {text: "\u2661", suit: "heart"},
+  "diamond0"    : {text: "\u2662", suit: "diamond"},
+  // back ----------------------------------------------------------------------
+  "redback"     : {text: String.fromCodePoint(0x01F0A0), suit: "redback"},
+  "blackback"   : {text: String.fromCodePoint(0x01F0A0), suit: "blackback"},
+  // joker ---------------------------------------------------------------------
+  // "fakejoker"   : {text: String.fromCodePoint(0x01F0BF), suit: "fakejoker"},
+  "redjoker"    : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "blackjoker"  : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "redjoker0"   : {text: String.fromCodePoint(0x01F0DF), suit: "redjoker"},
+  "blackjoker0" : {text: String.fromCodePoint(0x01F0DF), suit: "blackjoker"},
+  // redjoker ------------------------------------------------------------------
+  "ar"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "2r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "3r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "4r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "5r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "6r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "7r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "8r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "9r"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "10r"         : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "jr"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "cr"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "qr"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  "kr"          : {text: String.fromCodePoint(0x01F0CF), suit: "redjoker"},
+  // blackjoker ----------------------------------------------------------------
+  "ab"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "2b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "3b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "4b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "5b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "6b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "7b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "8b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "9b"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "10b"         : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "jb"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "cb"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "qb"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  "kb"          : {text: String.fromCodePoint(0x01F0CF), suit: "blackjoker"},
+  // spade ---------------------------------------------------------------------
+  "as"          : {text: String.fromCodePoint(0x01F0A1), suit: "spade"},
+  "2s"          : {text: String.fromCodePoint(0x01F0A2), suit: "spade"},
+  "3s"          : {text: String.fromCodePoint(0x01F0A3), suit: "spade"},
+  "4s"          : {text: String.fromCodePoint(0x01F0A4), suit: "spade"},
+  "5s"          : {text: String.fromCodePoint(0x01F0A5), suit: "spade"},
+  "6s"          : {text: String.fromCodePoint(0x01F0A6), suit: "spade"},
+  "7s"          : {text: String.fromCodePoint(0x01F0A7), suit: "spade"},
+  "8s"          : {text: String.fromCodePoint(0x01F0A8), suit: "spade"},
+  "9s"          : {text: String.fromCodePoint(0x01F0A9), suit: "spade"},
+  "10s"         : {text: String.fromCodePoint(0x01F0AA), suit: "spade"},
+  "js"          : {text: String.fromCodePoint(0x01F0AB), suit: "spade"},
+  "cs"          : {text: String.fromCodePoint(0x01F0AC), suit: "spade"},
+  "qs"          : {text: String.fromCodePoint(0x01F0AD), suit: "spade"},
+  "ks"          : {text: String.fromCodePoint(0x01F0AE), suit: "spade"},
+  // heart ---------------------------------------------------------------------
+  "ah"          : {text: String.fromCodePoint(0x01F0B1), suit: "heart"},
+  "2h"          : {text: String.fromCodePoint(0x01F0B2), suit: "heart"},
+  "3h"          : {text: String.fromCodePoint(0x01F0B3), suit: "heart"},
+  "4h"          : {text: String.fromCodePoint(0x01F0B4), suit: "heart"},
+  "5h"          : {text: String.fromCodePoint(0x01F0B5), suit: "heart"},
+  "6h"          : {text: String.fromCodePoint(0x01F0B6), suit: "heart"},
+  "7h"          : {text: String.fromCodePoint(0x01F0B7), suit: "heart"},
+  "8h"          : {text: String.fromCodePoint(0x01F0B8), suit: "heart"},
+  "9h"          : {text: String.fromCodePoint(0x01F0B9), suit: "heart"},
+  "10h"         : {text: String.fromCodePoint(0x01F0BA), suit: "heart"},
+  "jh"          : {text: String.fromCodePoint(0x01F0BB), suit: "heart"},
+  "ch"          : {text: String.fromCodePoint(0x01F0BC), suit: "heart"},
+  "qh"          : {text: String.fromCodePoint(0x01F0BD), suit: "heart"},
+  "kh"          : {text: String.fromCodePoint(0x01F0BE), suit: "heart"},
+  // diamond -------------------------------------------------------------------
+  "ad"          : {text: String.fromCodePoint(0x01F0C1), suit: "diamond"},
+  "2d"          : {text: String.fromCodePoint(0x01F0C2), suit: "diamond"},
+  "3d"          : {text: String.fromCodePoint(0x01F0C3), suit: "diamond"},
+  "4d"          : {text: String.fromCodePoint(0x01F0C4), suit: "diamond"},
+  "5d"          : {text: String.fromCodePoint(0x01F0C5), suit: "diamond"},
+  "6d"          : {text: String.fromCodePoint(0x01F0C6), suit: "diamond"},
+  "7d"          : {text: String.fromCodePoint(0x01F0C7), suit: "diamond"},
+  "8d"          : {text: String.fromCodePoint(0x01F0C8), suit: "diamond"},
+  "9d"          : {text: String.fromCodePoint(0x01F0C9), suit: "diamond"},
+  "10d"         : {text: String.fromCodePoint(0x01F0CA), suit: "diamond"},
+  "jd"          : {text: String.fromCodePoint(0x01F0CB), suit: "diamond"},
+  "cd"          : {text: String.fromCodePoint(0x01F0CC), suit: "diamond"},
+  "qd"          : {text: String.fromCodePoint(0x01F0CD), suit: "diamond"},
+  "kd"          : {text: String.fromCodePoint(0x01F0CE), suit: "diamond"},
+  // club ----------------------------------------------------------------------
+  "ac"          : {text: String.fromCodePoint(0x01F0D1), suit: "club"},
+  "2c"          : {text: String.fromCodePoint(0x01F0D2), suit: "club"},
+  "3c"          : {text: String.fromCodePoint(0x01F0D3), suit: "club"},
+  "4c"          : {text: String.fromCodePoint(0x01F0D4), suit: "club"},
+  "5c"          : {text: String.fromCodePoint(0x01F0D5), suit: "club"},
+  "6c"          : {text: String.fromCodePoint(0x01F0D6), suit: "club"},
+  "7c"          : {text: String.fromCodePoint(0x01F0D7), suit: "club"},
+  "8c"          : {text: String.fromCodePoint(0x01F0D8), suit: "club"},
+  "9c"          : {text: String.fromCodePoint(0x01F0D9), suit: "club"},
+  "10c"         : {text: String.fromCodePoint(0x01F0DA), suit: "club"},
+  "jc"          : {text: String.fromCodePoint(0x01F0DB), suit: "club"},
+  "cc"          : {text: String.fromCodePoint(0x01F0DC), suit: "club"},
+  "qc"          : {text: String.fromCodePoint(0x01F0DD), suit: "club"},
+  "kc"          : {text: String.fromCodePoint(0x01F0DE), suit: "club"}
+};
+
+self.Icon = {
+  "no"       : {text: String.fromCodePoint(0x01F221)},
+  "win"      : {text: String.fromCodePoint(0x01F247)},
+  "lost"     : {text: String.fromCodePoint(0x01F248)},
+  "blackout" : {text: String.fromCodePoint(0x01F5F2)},
+  "dealer"   : {text: String.fromCodePoint(0x01F472)},
+  "bulb"     : {text: String.fromCodePoint(0x01F4A1)}
+};
+
+self.abbrv = {
+  s: "spade", c: "club", h: "heart", d: "diamond",
+  r: "redjoker", b: "blackjoker"
+};
+
+module.exports = self;
